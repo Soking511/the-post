@@ -22,18 +22,20 @@ export default {
           700: '#0369a1',
           800: '#075985',
           900: '#0c4a6e',
+          950: '#082f49',
         },
         secondary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
+          50: '#f5f7ff',
+          100: '#ebf0ff',
+          200: '#d6e0ff',
+          300: '#adc0ff',
+          400: '#819dff',
+          500: '#5e73fd',
+          600: '#3a55f3',
+          700: '#2c41d7',
+          800: '#2635ae',
           900: '#1e3a8a',
+          950: '#0f1d64',
         },
         accent: {
           50: '#fff7ed',
@@ -46,6 +48,7 @@ export default {
           700: '#c2410c',
           800: '#9a3412',
           900: '#7c2d12',
+          950: '#431407',
         },
         neutral: {
           50: '#fafafa',
@@ -58,7 +61,15 @@ export default {
           700: '#404040',
           800: '#262626',
           900: '#171717',
+          950: '#0a0a0a',
         }
+      },
+      boxShadow: {
+        'soft-sm': '0 2px 10px -3px rgba(0, 0, 0, 0.1), 0 1px 2px -2px rgba(0, 0, 0, 0.05)',
+        'soft': '0 5px 15px -3px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+        'soft-md': '0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 3px 6px -2px rgba(0, 0, 0, 0.05)',
+        'soft-lg': '0 15px 35px -5px rgba(0, 0, 0, 0.1), 0 5px 15px -2px rgba(0, 0, 0, 0.05)',
+        'glass': '0 0 15px 0 rgba(255, 255, 255, 0.05)',
       },
       animation: {
         'fade-in': 'fadeIn 1.5s ease-out forwards',
@@ -66,6 +77,11 @@ export default {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'gradient-y': 'gradient-y 15s ease infinite',
+        'gradient-xy': 'gradient-xy 15s ease infinite',
       },
       keyframes: {
         fadeIn: {
@@ -87,7 +103,47 @@ export default {
         'blink-caret': {
           'from, to': { borderColor: 'transparent' },
           '50%': { borderColor: 'currentColor' },
+        },
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
+        },
+        'gradient-y': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'center top'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'center center'
+          }
+        },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        },
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
         }
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
       }
     },
   },

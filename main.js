@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update the displayed countdown with improved animations
       countdownElement.innerHTML = `
-        <div class="flex justify-center space-x-4 md:space-x-6">
+        <div class="flex justify-center space-x-4 md:space-x-6 text-white">
           <div class="flex flex-col items-center">
             <span class="text-3xl md:text-4xl font-bold countdown-number" data-value="${days}">${days}</span>
             <span class="text-xs uppercase text-white/70">Days</span>
