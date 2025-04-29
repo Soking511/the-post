@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Send to our server endpoint
-        fetch('http://localhost:3000/api/subscribe', {
+        fetch('http://localhost:5000/api/subscribe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
